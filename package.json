@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Deva658/162_ChatBot/issues"
   },
-  "homepage": "https://github.com/Deva658/162_ChatBot#readme"
+  "homepage": "https://github.com/Deva658/162_ChatBot#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
