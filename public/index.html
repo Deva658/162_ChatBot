@@ -3,27 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot AI</title>
+    <title>Chatbot AI — MAHGIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg-ambient"></div>
+
     <div class="chat-container">
         <header class="chat-header">
-            <h1>Chatbot AI</h1>
-            <p>NVIDIA Nemotron 3 Ultra</p>
+            <div class="header-brand">
+                <div class="bot-badge" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="16" rx="4"></rect>
+                        <circle cx="9" cy="11" r="1.5" fill="currentColor"></circle>
+                        <circle cx="15" cy="11" r="1.5" fill="currentColor"></circle>
+                        <path d="M9 16h6" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+                <div class="header-titles">
+                    <h1>Chatbot AI</h1>
+                    <p><span class="status-dot"></span>MAHGIT</p>
+                </div>
+            </div>
+
+            <button type="button" id="clearBtn" class="clear-btn" title="Hapus percakapan">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Reset</span>
+            </button>
         </header>
         
         <div class="chat-box" id="chatBox">
             <div class="message bot">
-                <div class="bubble">Halo! Ada yang bisa saya bantu?</div>
+                <div class="avatar">AI</div>
+                <div class="bubble">Halo! Saya Mahgit, ada yang bisa saya bantu?</div>
+            </div>
+
+            <div class="quick-prompts" id="quickPrompts">
+                <button type="button" class="prompt-chip" data-text="Jelaskan cara kerja REST API beserta contohnya">Cara kerja REST API</button>
+                <button type="button" class="prompt-chip" data-text="Buatkan contoh query SQL dengan JOIN dan GROUP BY">Contoh query SQL</button>
+                <button type="button" class="prompt-chip" data-text="Berikan tips struktur folder Express.js yang rapi">Struktur Express.js</button>
             </div>
         </div>
 
         <div class="input-area">
-            <input type="text" id="userInput" placeholder="Ketik pesan..." autocomplete="off">
-            <button id="sendBtn">Kirim</button>
+            <div class="input-box">
+                <textarea id="userInput" rows="1" placeholder="Ketik pesan... (Shift + Enter untuk baris baru)" autocomplete="off"></textarea>
+                <button id="sendBtn" title="Kirim pesan">
+                    <span>Kirim</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
